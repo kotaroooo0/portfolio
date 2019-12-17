@@ -7,7 +7,7 @@ https-portal:
     - nginx
   restart: always
   environment:
-    DOMAINS: "kotaroooo0.com -> http://nginx:8000"
+    DOMAINS: "kotaroooo0.com -> http://34.84.5.71:8000"
     STAGE: "production"
     # FORCE_RENEW: "true"
 

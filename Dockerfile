@@ -9,7 +9,7 @@ ADD src /portfolio
 ADD default.conf /etc/nginx/conf.d/default.conf
 
 # ポート設定
-EXPOSE 80
+EXPOSE 8000
 
 RUN mkdir -p /run/nginx
 
