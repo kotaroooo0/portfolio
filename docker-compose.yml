@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  # HTTPS Reverse Proxy
+  https-portal:
+    image: steveltn/https-portal:1
+    container_name: portfolio-https-portal
+    ports:
+      - "80:80"
+      - "443:443"
+    # OS起動時に立ち上げ
+    restart: always
+    environment:
+      STAGE: "production"
+      DOMAINS: >-
+        www.kotaroooo0.com
+    volumes:
+      - portfolio-vhosts:/var/www/vhosts
+volumes:
+  # 静的ウェブサイト
+  portfolio-vhosts: ./src
