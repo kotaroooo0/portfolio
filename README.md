@@ -13,6 +13,6 @@ $ git clone https://github.com/kotaroooo0/portfolio.git
 ```
 
 ```
-$ docker build ./ -t portfolio_alpine_nginx
-$ docker run -p 80:80 -p 443:443 portfolio-https
+$ docker build ./ -t  portfolio-https
+$ docker run -v src:/var/www/vhosts/www.kotaroooo0.com/ -p 80:80 -p 443:443 portfolio-https
 ```
