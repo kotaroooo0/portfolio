@@ -3,14 +3,14 @@
 }
 
 .text-primary {
-  color: $primary !important;
+  color: $white !important;
 }
 
 a {
-  color: $primary;
+  color: $white;
   &:hover,
   &:focus,
   &:active {
-    color: darken($primary, 15%);
+    color: $gray-200;
   }
 }
