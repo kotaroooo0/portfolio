@@ -1,17 +1,6 @@
-FROM alpine
+FROM steveltn/https-portal:1
 
-# nginxのインストール
-RUN apk update && \
-    apk add --no-cache nginx
+EXPOSE 80 443
 
-# ドキュメントルート
-ADD src /portfolio
-ADD default.conf /etc/nginx/conf.d/default.conf
-
-# ポート設定
-EXPOSE 80
-
-RUN mkdir -p /run/nginx
-
-# フォアグラウンドでnginx実行
-CMD nginx -g "daemon off;"
+ENV STAGE "production"
+ENV DOMAINS www.kotaroooo0.com
