@@ -34,7 +34,13 @@ git でクローンしたディレクトリに入りイメージをビルドす�
 
 ```
 $ docker build ./ -t  portfolio-https
-$ docker run -v src:/var/www/vhosts/www.kotaroooo0.com/ -v /data/ssl_certs:/var/lib/https-portal -p 80:80 -p 443:443 portfolio-https
+$ docker run -v {srcへの絶対パス}:/var/www/vhosts/www.kotaroooo0.com/ -v /data/ssl_certs:/var/lib/https-portal -p 80:80 -p 443:443 portfolio-https
+```
+
+もしくは
+
+```
+docker-compose up -d
 ```
 
 ### 5(TODO): 自動デプロイ
