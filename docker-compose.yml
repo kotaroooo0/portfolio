@@ -13,4 +13,5 @@ services:
       DOMAINS: >-
         www.kotaroooo0.com
     volumes:
-      - ./src:/var/www/vhosts/www.kotaroooo0.com/
+      - ./src:/var/www/vhosts/www.kotaroooo0.com
+      - /data/ssl_certs:/var/lib/https-portal
